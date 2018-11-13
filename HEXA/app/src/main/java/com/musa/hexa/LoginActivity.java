@@ -104,10 +104,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<MyResponse> call, Response<MyResponse> response) {
                 progressDialog.dismiss();
-                System.out.println("res=" + response.body().toString());
-                MyResponse res = response.body();
                 try{
-                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                    MyResponse res = response.body();
+                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                         intent.putExtra("token", res.getToken());
                         intent.putExtra("username", res.getUsername());
                         intent.putExtra("email", res.getEmail());

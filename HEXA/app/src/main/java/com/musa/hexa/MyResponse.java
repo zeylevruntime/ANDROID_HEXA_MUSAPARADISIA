@@ -3,6 +3,7 @@ package com.musa.hexa;
 public class MyResponse {
     String token,username,email,fullname,address,photo;
 
+
     public String getToken() {
         return token;
     }
